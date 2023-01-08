@@ -13,4 +13,4 @@ The folder contains programs in which I wrote various data structures, for examp
 - mound
 - graph
 
-In a subfolder named Project_SEM is a project I did for a course credit in college. The project data picture contains the command to execute (in Polish), and in the folder with name "src" is the source code.
+In a subfolder named Project_SEM is a project I did for a course credit in college. The project data picture contains the command to execute (in Polish language), and in the folder with name "src" is the source code.
