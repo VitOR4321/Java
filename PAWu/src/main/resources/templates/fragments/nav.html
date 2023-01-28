@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<body>
+<div th:fragment="navbar">
+		<nav class="navbar active  navbar-dark navbar-expand-xl bg-dark text-light" style=" color: white !important; font-size: 1.4em !important;">
+		    <a href='./'>
+		      <img src="images/logo.png" alt="logo img" width="60px" height="60px" style="margin-left:20px">
+		    </a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" data-bs-controls="toggleMobileMenu" aria-expanded="false" aria-lable="Toggle navigation" style="margin:15px">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+		      <ul class="navbar-nav ms-auto text-center">
+		        <li class="nav-item active">
+		          <a class="nav-link" href="./registration_add">Rejestracja</a>
+		        </li>
+		        <li>
+		          <a class="nav-link" href="./matches_list">Mecze</a>
+		        </li>
+		        <li>
+		          <a class="nav-link" href="./history_list">Historia</a>
+		        </li>
+		        <li>
+		          <a class="nav-link" href="./ranking_list">Ranking</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </nav>
+	</div>
+
+</body>
+</html>
+	
+	
+ 
+

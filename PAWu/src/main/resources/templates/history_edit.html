@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org" lang="pl"> 
+  <head>
+  <meta charset="UTF-8"> 
+  	<title>Truniej Szachowy UMG</title> 
+  	<meta name="description" content="Zapisy na truniej szachowy Uniwersytetu Morskiego w Gdyni">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+  <body> 
+     <div th:replace="fragments/nav.html :: navbar"></div> 
+    
+    <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+    <h1>Edycja Historii Rozgrywki</h1> 
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+  <div class="col-10 col-md-8 col-lg-6">
+<form action="#" th:action="@{/saveHistory}" th:object="${his}" method="post">
+
+<div class="form-group">
+  <label for="winner" class="form-label">Wygrał</label>
+  <input type="text" class="form-control" value="{{$his->winner}}" name="winner" id="winner" required>
+</div>
+<div class="form-group">
+  <label for="winnerPoints" class="form-label">Punkty</label>
+  <input type="number" class="form-control" value="{{$his->winnerPoints}}" name="winnerPoints" id="winnerPoints" required>
+</div>
+<div class="form-group">
+  <label for="loser" class="form-label">Przegrał</label>
+  <input type="text" class="form-control" value="{{$his->loser}}" name="loser" id="loser" required>
+</div>
+<div class="form-group">
+  <label for="loserPoints" class="form-label">Punkty</label>
+  <input type="number" class="form-control" value="{{$his->loserPoints}}" name="loserPoints" id="loserPoints" required>
+</div>
+<button type="submit" class="btn btn-primary" style="margin-bottom:15px;margin-top:15px">Zaktualizuj</button>
+</form>
+</div>
+</div>
+</div>
+    
+     <div th:replace="fragments/footer :: footer"></div> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body> 
+</html>
